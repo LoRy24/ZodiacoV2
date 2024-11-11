@@ -628,6 +628,8 @@ BirthDate requestBirthDateForm() {
 
 #pragma region Funzioni Grafiche - Menu Segno Zodiacale
 
+
+
 #pragma endregion
 
 #pragma region Routine Programma
