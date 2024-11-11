@@ -1,8 +1,9 @@
 //
 // Zodiaco V2.0 by Lorenzo Rocca
+//
 // Descrizione: 
 // Questo programma permette di calcolare il segno zodiacale di una persona in base alla data di nascita.
-// La UI sembra volutamente quella di un videogame degli anni 80, più o meno ;3
+// La UI sembra volutamente quella di un videogame arcade, per dare un tocco di originalità.
 //
 
 // Inclusioni
