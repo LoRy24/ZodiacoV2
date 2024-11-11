@@ -16,6 +16,7 @@ using namespace std;
 #pragma region Definizioni
 
 // Impostazioni finestra
+// Per evitare problemi, non modificare le seguenti impostazioni
 #define WIDTH                                   1300
 #define HEIGHT                                  800
 #define WINDOW_TITLE                            "Zodiaco V2.0"
@@ -32,6 +33,7 @@ using namespace std;
 #define INTRO_IMAGE                             "./img/intestazione.jpg"
 #define PRESS_ENTER_IMAGE                       "./img/premi_invio.jpg"
 #define DATA_NASCITA_IMAGE                      "./img/data_nascita_titolo.jpg"
+#define PULSANTI_MENU_DATA_NASCITA_IMAGE        "./img/pulsanti_menu_nascita.jpg"
 
 #pragma endregion
 
@@ -176,7 +178,7 @@ void waitForPressEnterToContinue() {
 void printBirthDateFormHeader(int y) {
     // Calcola le dimensioni dell'immagine
     int imageWidth = 450;
-    int imageHeight = computeBasedOnNewWidth(1200, 400, 400);
+    int imageHeight = computeBasedOnNewWidth(1200, 400, imageWidth);
 
     // In base alla dimensione dello schermo, decidi lo spazio per centrarla
     int x = (WIDTH - imageWidth) / 2;
@@ -189,7 +191,16 @@ void printBirthDateFormHeader(int y) {
  * @brief Stampa i pulsanti in basso a destra
  */
 void printRightBottomButtons(int rightDistance, int bottomDistance) {
+    // Calcola le dimensioni dell'immagine
+    int imageWidth = 550;
+    int imageHeight = computeBasedOnNewWidth(850, 100, imageWidth);
 
+    // In base alla dimensione dello schermo, decidi lo spazio per posizionarlo in basso a destra
+    int x = WIDTH - rightDistance - imageWidth;
+    int y = HEIGHT - bottomDistance - imageHeight;
+
+    // Stampa l'immagine
+    readimagefile(PULSANTI_MENU_DATA_NASCITA_IMAGE, x, y, x + imageWidth, y + imageHeight);
 }
 
 /**
@@ -200,7 +211,7 @@ void setupBirtDateForm() {
     printBirthDateFormHeader(100);
 
     // Scrivi i pulsanti in basso a destra
-    printRightBottomButtons(100, 80);
+    printRightBottomButtons(55, 18);
 }
 
 #pragma endregion
