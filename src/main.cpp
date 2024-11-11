@@ -64,6 +64,14 @@ struct BirthDate
     int year;
 };
 
+/**
+ * @brief Enum per la selezione della data
+ */
+enum DateSelection {
+    DAY,
+    MONTH
+};
+
 
 #pragma endregion
 
@@ -201,6 +209,14 @@ void printRightBottomButtons(int rightDistance, int bottomDistance) {
 
     // Stampa l'immagine
     readimagefile(PULSANTI_MENU_DATA_NASCITA_IMAGE, x, y, x + imageWidth, y + imageHeight);
+}
+
+/**
+ * @brief Stampa lo sfondo del prompt della data di nascita. In base al selected, evidenzierà uno
+ *        dei due campi. Opzioni: 1 = giorno, 2 = mese
+ */
+void printDateSelectionBackground(DateSelection highlighted) {
+    
 }
 
 /**
