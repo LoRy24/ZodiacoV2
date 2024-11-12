@@ -92,18 +92,6 @@ enum ZodiacalSign {
 
 #pragma endregion
 
-#pragma region Funzioni speciali
-
-/**
- * @brief Funzione per attendere un tot di millisecondi
- * @param milliseconds Millisecondi da attendere
- */
-void sleep_ms(int milliseconds) {
-    usleep(milliseconds * 1000);
-}
-
-#pragma endregion
-
 #pragma region Utilità immagini
 
 /**
@@ -262,7 +250,10 @@ void waitForPressEnterToContinue() {
         }
 
         // Attendi 1ms
-        usleep(1);
+        struct timespec ts;
+        ts.tv_nsec = 1000 * 1000 * 1;
+        ts.tv_sec = 0;
+        nanosleep(&ts, NULL);
     }
 }
 
@@ -659,7 +650,10 @@ void playZodiacalSignAnimation(ZodiacalSign zodiacalSign) {
         std::cout << "Frame attuale: " << frame << std::endl;
 
         // Attendi il tempo dell'animazione (500ms)
-        usleep(500 * 100);
+        struct timespec ts;
+        ts.tv_nsec = 1000 * 1000 * 50;
+        ts.tv_sec = 0;
+        nanosleep(&ts, NULL);
     }
 
     // Debug
