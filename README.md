@@ -8,7 +8,8 @@ Zodiaco V2 è un software Open Source scritto in C++ con il fine di calcolare in
 ## 📦 Installazione
 Per installare il software, sarà necessario unzippare il primo file contenuto nell'ultima versione caricata su GitHub. Puoi trovare la versioen da scaricare sulla parte laterale a destra della repository.
 
-Una volta estratto il contenuto del file .zip, sarà possibile eseguire il file .exe e usufruire dell'esperienza.
+Una volta estratto il contenuto del file .zip, sarà possibile eseguire il file .bat, il quale eseguirà correttamente il programma. Non è possibile eseguire direttamente il file .exe se non si ha installato
+MinGW32
     
 ## 💻 Contributi
 Se sei interessato a contribuire al progetto, ti consigliamo di aprire una pull-request a questa repository. Ti ricordo di rispettare i termini per contribuire ed essere accettato.
