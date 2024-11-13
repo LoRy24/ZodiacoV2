@@ -27,7 +27,7 @@
 #define WINDOW_TITLE                            "Zodiaco V2.0"
 
 // Press Enter To Continue
-#define PRESS_ENTER_TO_CONTINUE_CLOCK_MS        300
+#define PRESS_ENTER_TO_CONTINUE_CLOCK_MS        30
 #define PRESS_ENTER_TO_CONTINUE_Y               600
 
 // Ascii
@@ -251,7 +251,7 @@ void waitForPressEnterToContinue() {
 
         // Attendi 1ms
         struct timespec ts;
-        ts.tv_nsec = 1000 * 1000 * 1;
+        ts.tv_nsec = 1000 * 1000 * 10;
         ts.tv_sec = 0;
         nanosleep(&ts, NULL);
     }
