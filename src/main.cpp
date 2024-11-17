@@ -551,31 +551,10 @@ ZodiacalSign segniZodiacaliSecondaMeta[12] = {
  */
 ZodiacalSign getZodiacalSign(BirthDate birthDate, bool* cuspide) {
     // Definisco il limite e il giorno di scambio
-    int limit = 0, changeDay = 0;
+    int changeDay = 0;
 
     // Definisco il mese
     int month = birthDate.month + 1;
-
-    // In base al mese, imposto il limite di giorni
-    switch (month) {
-        case 4:
-        case 6:
-        case 9:
-        case 11: {
-            limit = 30;
-            break;
-        }
-
-        case 2: {
-            limit = 29;
-            break;
-        }
-
-        default: {
-            limit = 31;
-            break;
-        }
-    }
     
     // Sempre in base al mese, imposto il giorno di scambio
     switch (month) {
